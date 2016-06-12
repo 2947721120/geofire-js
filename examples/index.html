@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GeoFire Examples</title>
+    <title>地理消防例子</title>
     <style>
       .code {
         white-space: pre;
@@ -11,154 +11,157 @@
   </head>
 
   <body style="width: 800px; margin: auto;">
-    <h1 style="text-align: center;">GeoFire Examples</h1>
+    <h1 style="text-align: center;">地理消防例子</h1>
 
     <p>
-      <a href="https://www.github.com/firebase/geofire/">GeoFire</a> is a set of open-source libraries
-      for JavaScript, Objective-C, and Java that allow you to store and query a set of keys based on
-      their geographic location. At its heart, GeoFire simply stores locations with string keys. Its
-      main benefit, however, is the possibility of retrieving only those keys within a given geographic
-      area - all in realtime.
+      <a href="https://www.github.com/firebase/geofire/">GeoFire</a> 是一套开放源代码库
+      为JavaScript，Objective-C的，和Java，允许您根据存储和查询一组按键
+      其地理位置。在它的心脏，GeoFire只需存储与字符串键的位置。 它的
+      主要的好处，但是，是在给定的地理检索只有那些键的可能性
+       - 所有实时。
+    </p>
+GeoFire使用<a href="https://www.firebase.com/?utm_source=geofire">火力地堡</a>用于数据存储，
+ 允许查询结果以实时，因为他们改变进行更新。 GeoFire<strong>选择性加载
+ 只有附近特定位置的数据，让您的应用程序和光响应</strong>，甚至
+ 具有非常大的数据集。
+    <p>
+    GeoFire使用<a href="https://www.firebase.com/?utm_source=geofire">火力地堡</a>用于数据存储，
+ 允许查询结果以实时，因为他们改变进行更新。 GeoFire<strong>选择性加载
+ 只有附近特定位置的数据，让您的应用程序和光响应</strong>，甚至
+ 具有非常大的数据集。
     </p>
 
     <p>
-      GeoFire uses <a href="https://www.firebase.com/?utm_source=geofire">Firebase</a> for data storage,
-      allowing query results to be updated in realtime as they change. GeoFire <strong>selectively loads
-      only the data near certain locations, keeping your applications light and responsive</strong>, even
-      with extremely large datasets.
-    </p>
-
-    <p>
-      There are compatible GeoFire clients available for <a href="https://github.com/firebase/geofire-js">JavaScript</a>,
+     有可用于兼容GeoFire客户<a href="https://github.com/firebase/geofire-js">JavaScript</a>,
       <a href="https://github.com/firebase/geofire-objc">Objective-C</a>, and
       <a href="https://github.com/firebase/geofire-java">Java</a>.
     </p>
 
     <p>
-      Note that the demos below are all written in JavaScript. You can find Objective-C and
-      Java examples in their respective GitHub repositories.
+     请注意，下面的演示都是用JavaScript编写的。你可以找到Objective-C和
+      在各自的GitHub库的Java实例。
     </p>
 
-    <h2><a href="./fish1/index.html">fish1 - Writing To and Reading From GeoFire</a></h2>
+    <h2><a href="./fish1/index.html">fish1 - 写入和读取从GeoFire</a></h2>
 
     <p>
-      This is a very basic example which shows you how to read from and write to GeoFire
-      and how to handle the promises returned by the <span class="code">set()</span>,
+      这是一个非常基本的例子说明了如何读取和写入GeoFire
+      以及如何处理由返回的承诺... <span class="code">set()</span>,
       <span class="code">get()</span>, and <span class="code">remove()</span> methods.
     </p>
 
-    <p>You can check out a live demo of this example <a href="./fish1/index.html">here</a>.</p>
+    <p>你可以看看这个例子的现场演示 <a href="./fish1/index.html">这</a>.</p>
 
-    <h2><a href="./fish2/index.html">fish2 - Using a GeoQuery</a></h2>
+    <h2><a href="./fish2/index.html">fish2 - 使用GeoQuery</a></h2>
 
     <p>
-      This is a more complex example which shows you how to create a GeoQuery and
-      respond to keys moving into, out of, and within the query. It also shows how
-      to cancel event callback registrations.
+    这是一个更为复杂的例子向您展示了如何创建一个GeoQuery和
+      应对键移动进，出，并在查询中。它还说明了如何
+      取消事件回调注册。...
     </p>
 
-    <p>You can check out a live demo of this example <a href="./fish2/index.html">here</a>.</p>
+    <p>你可以看看这个例子的现场演示<a href="./fish2/index.html">here</a>.</p>
 
-    <h2><a href="./fish3/index.html">fish3 - Loading Initial Data</a></h2>
+    <h2><a href="./fish3/index.html">fish3 - 加载初始数据</a></h2>
 
     <p>
-      This example shows you how to achieve a common use case: loading only initial
-      data. This is accomplished in GeoFire by canceling a GeoQuery once its "ready"
-      event has fired.
+     这个例子说明了如何实现一个共同的用例：只加载初始
+       数据。这在GeoFire被取消GeoQuery一旦其“准备就绪”完成
+      事件已经被解雇。
     </p>
 
-    <p>You can check out a live demo of this example <a href="./fish3/index.html">here</a>.</p>
+    <p>你可以看看这个例子的现场演示<a href="./fish3/index.html">here</a>.</p>
 
-    <h2><a href="./html5Geolocation/index.html">html5Geolocation - HTML5 Geolocation API</a></h2>
+    <h2><a href="./html5Geolocation/index.html">HTML5地理位置 - HTML5地理位置API</a></h2>
 
     <p>
-      The <a href="http://diveintohtml5.info/geolocation.html">HTML5 Geolocation API</a> allows you
-      to get the current location of the person who is viewing your site. This demo shows
-      how to use it to add their location to GeoFire. In addition, the examples uses
-      Firebase's <span class="code">onDisconnect()</span> method to remove their location from GeoFire when they
-      leave the page (or close the app).
+      The <a href="http://diveintohtml5.info/geolocation.html">HTML5地理位置 </a>让你
+      让谁正在查看您网站的用户的当前位置。本演示展示
+      如何使用它自己的位置添加到GeoFire。此外，该实施例使用
+      火力地堡的 <span class="code">onDisconnect()</span>方法从GeoFire当他们卸下自己的位置
+      离开页面（或关闭应用程序）。
     </p>
 
-    <p>You can check out a live demo of this example <a href="./html5Geolocation/index.html">here</a>.</p>
+    <p>你可以看看这个例子的现场演示 <a href="./html5Geolocation/index.html">here</a>.</p>
 
-    <h2><a href="./queryBuilder/index.html">queryBuilder - Build a Custom GeoQuery</a></h2>
+    <h2><a href="./queryBuilder/index.html">QueryBuilder的 - 建立一个自定义GeoQuery</a></h2>
 
     <p>
-      This demo allows you to build custom <span class="code">GeoQuery</span> objects and see when
-      fish enter and leave the query as it gets updated. Thanks to
-      <a href="https://github.com/stefek99">@stefek99</a> for the contribution!
+     此演示，让您构建自定义<span class="code">GeoQuery</span> 对象看时，
+      鱼进入和离开的查询，因为它得到更新。 谢谢
+      <a href="https://github.com/stefek99">@stefek99</a>对于贡献！
     </p>
 
-    <p>You can check out a live demo of this example <a href="./queryBuilder/index.html">here</a>.</p>
+    <p>你可以看看这个例子的现场演示 <a href="./queryBuilder/index.html">here</a>.</p>
 
-    <h2><a href="./securityRules/">securityRules - Security Rules</a></h2>
+    <h2><a href="./securityRules/">securityRules - 安全规则</a></h2>
 
     <p>
-      It is important to protect your data with
-      <a href="https://www.firebase.com/docs/security/">Firebase and Security Rules</a>. This
-      example contains several different versions of rules for your GeoFire index. All of the
-      following rules enforce the schema of your index, but allow varying types of updates to it.
+      它以保护您的数据是非常重要的
+      <a href="https://www.firebase.com/docs/security/">火力地堡和安全规则</a>。 这个
+      例如包含几个不同的版本，为您的GeoFire指数的规则。 全部
+      以下规则执行你的索引的模式，但允许不同类型的更新它。
     </p>
 
     <ul>
       <li>
-        <b><a href="./securityRules/rules.json">Default rules</a></b> -
-        These rules allow any client to add, update, or remove items from your index. This does not
-        prevent a malicious user from overwriting your index.
+        <b><a href="./securityRules/rules.json">默认规则</a></b> -
+       这些规则允许任何客户端添加，更新，或从索引中删除的项目。这不
+        防止恶意用户覆盖索引。
       </li>
 
       <li>
-        <b><a href="./securityRules/authenticated.rules.json">Authenticated rules</a></b> -
-        These rules require that only authenticated clients can update your index. Note that these
-        rules will intentionally cause all <span class="code">GeoFire.add()</span> and
-        <span class="code">GeoFire.remove()</span> calls to fail for unauthenticated clients.
+        <b><a href="./securityRules/authenticated.rules.json">经过身份验证的规则</a></b> -
+       这些规则要求只有经过身份验证的客户端可以更新您的索引。请注意，这些
+        规则将故意导致所有 <span class="code">GeoFire.add()</span> and
+        <span class="code">GeoFire.remove()</span>调用失败的未经验证的客户端。
       </li>
 
       <li>
-        <b><a href="./securityRules/noDeletes.rules.json">No deletes rules</a></b> -
-        These rules prevent clients from being able to delete any existing keys in your index. Note
-        that these rules will intentionally cause all <span class="code">GeoFire.remove()</span>
-        calls to fail.
+        <b><a href="./securityRules/noDeletes.rules.json">没有删除规则</a></b> -
+      这些规则阻止客户能够在索引中删除任何现有密钥。 注意
+        这些规则将故意导致所有<span class="code">GeoFire.remove()</span>
+       调用失败。
       </li>
 
       <li>
-        <b><a href="./securityRules/noUpdates.rules.json">No updates rules</a></b> -
-        These rules prevent clients from being able to update or delete any existing keys in your
-        index. Note that these rules will intentionally fail all <span class="code">GeoFire.remove()</span>
-        calls as well as any <span class="code">GeoFire.add()</span> calls for existing keys in the index.
+        <b><a href="./securityRules/noUpdates.rules.json">无更新规则</a></b> -
+      这些规则阻止客户能够在更新或删除任何现有的按键
+         指数。请注意，这些规则将故意不全部 <span class="code">GeoFire.remove()</span>
+       呼叫以及任何 <span class="code">GeoFire.add()</span>呼吁在现有的索引键。
       </li>
     </ul>
 
     <p>
-      You can further replace the <span class="code">".write"</span> rule in the example rules files
-      with some custom logic to restrict who and how users can write to your GeoFire index.
+  您可以进一步取代 <span class="code">".write"</span>在示例规则规则文件
+      一些自定义逻辑来限制谁，以及用户如何写信给你GeoFire指数.
     </p>
 
     <p>
-      All of the example rules ensure that one client cannot overwrite your entire GeoFire index
-      node with a single call. However, none of them prevent a malicious user from scraping your
-      entire index. You can replace the <span class="code">".read"</span> rule in the example rules
-      files with some custom logic to do this.
+   所有的示例规则确保一个客户端不能覆盖整个GeoFire指数
+      节点用一个电话。然而，他们没有阻止恶意用户的刮
+      整个索引。可以更换<span class="code">".read"</span>在这个例子议事规则
+      一些自定义逻辑文件来做到这一点。
     </p>
 
-    <h2><a href="./sfVehicles/index.html">sfVehicles - Fully-featured Example</a></h2>
+    <h2><a href="./sfVehicles/index.html">sfVehicles - 全功能的示例</a></h2>
 
     <p>
-      This is a fully-featured, complex example which combines GeoFire, Google Maps,
-      and the <a href="https://www.firebase.com/docs/open-data/transit.html?utm_source=geofire">Firebase Transit Open Data Set</a>.
-      Firebase provides a public Firebase which contains the realtime locations of public
-      transit vehicles in several major US cities, including San Francisco MUNI. The data
-      set also contains GeoFire data for each vehicle which we used to create this demo.
+    这是一个全功能的，复杂的例子结合GeoFire，谷歌地图，
+      和 <a href="https://www.firebase.com/docs/open-data/transit.html?utm_source=geofire">火力地堡交通开放数据集</a>的。
+      火力地堡提供了包含公开的实时位置的公共火力地堡
+      过境车辆在美国几个主要城市，包括旧金山MUNI。 数据
+      集也包含了我们用于创建这个演示每辆车GeoFire数据。
     </p>
 
     <p>
-      Drag around the purple circle to the left to see the vehicles which are currently within its radius. The
-      results update in realtime as you move the circle and as vehicles travel around the city. GeoFire handles all
-      of the hard work, telling you exactly when vehicles enter and exit the circle. It also selectively loads
-      only the data geographically close to the circle, meaning GeoFire data for buses in New York or Chicago are not
-      loaded into memory unnecessarily.
+  周围的紫色圆形向左拖动，看看这是目前它的半径范围内车辆。该
+      结果更新实时为您移动圆和车辆周围的城市旅行。 GeoFire处理所有
+      努力工作的，告诉你什么时候车辆进入和退出的圈子。它还选择性加载
+      只有数据地理位置接近圆形，意为GeoFire数据总线在纽约或芝加哥不
+      加载到内存中不必要的。
     </p>
 
-    <p>You can check out a live demo of this example <a href="./sfVehicles/index.html">here</a></p>
+    <p>你可以看看这个例子的现场演示 <a href="./sfVehicles/index.html">这</a></p>
   </body>
 </html>
